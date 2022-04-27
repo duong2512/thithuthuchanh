@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let diemthi = [4,6,7,9,5,2];
+    function maxElement(array){
+
+        let max =  array[0];
+        let max2 = 0;
+        let max3 = 0
+        for (let i = 0; i < array.length; ++i) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+        }
+        for (let i = 0; i < array.length ; i++) {
+            if (array[i]==max){
+                continue
+            }else if(max2 < array[i]) {
+                max2 = array[i];
+            }
+        }
+        for (let i = 0; i < array.length; i++) {
+            if (array[i]==max || array[i]==max2 ){
+                continue
+            }else if(max3 < array[i]) {
+                max3 = array[i];
+            }
+        }
+        return max3
+
+        }
+
+
+    console.log(maxElement(diemthi))
+
+
+
+</script>

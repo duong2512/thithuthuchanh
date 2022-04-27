@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = "11,12,13,14,15,16,17";
+    let b = "12,13";
+    let count = 0;
+
+    function check() {
+        for (let i = 0; i < a.length; i++) {
+            if (count == b.length) {
+                return true
+            }
+
+            if (a[i] == b[count]) {
+                count++;
+            } else if (a[i] == b[0]) {
+                count = 1
+            } else {
+                count = 0
+            }
+        } return false
+    }
+    console.log(check(count))
+</script>
